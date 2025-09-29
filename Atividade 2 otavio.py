@@ -1,6 +1,5 @@
 class Erro0(Exception):
     pass
-
 try:
     numero = int(input("Digite um número inteiro:" ))
     
@@ -8,7 +7,6 @@ try:
     if numero == 0:
         raise Erro0 (f"O numero {numero} não é permitido")
         
-
 except Erro0 as e:
     print(f"Erro: {e}")
 except ValueError:
