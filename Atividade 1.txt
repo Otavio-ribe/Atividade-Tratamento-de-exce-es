@@ -1,0 +1,16 @@
+class NumeroImparError(Exception):
+    pass
+
+try:
+    numero = int(input("Digite um número inteiro: "))
+    
+    if numero % 2 != 0:
+        raise NumeroImparError(f"O número {numero} é ímpar. Apenas números pares são permitidos.")
+    
+except NumeroImparError as e:
+    print(f"Erro: {e}")
+except ValueError:
+    print("O numero inserido nao é valido.")
+    
+else:
+    print(f"O número {numero} é par.")
